@@ -89,6 +89,11 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers(); // Ensure this line is present
+});
+
 app.UseAuthorization();
 
 app.Run();

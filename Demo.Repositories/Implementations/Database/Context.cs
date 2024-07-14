@@ -34,7 +34,7 @@ namespace Demo.Repositories.Implementations.Database
             }
         }
 
-        public DbSet<Party> Parties { get; set; }
+        public DbSet<Person> Parties { get; set; }
     
     }
 

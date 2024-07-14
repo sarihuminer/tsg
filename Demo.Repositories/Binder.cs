@@ -1,4 +1,6 @@
-﻿using Demo.Repositories.Implementations.Repositories;
+﻿using Demo.Application.Interfaces.Repository;
+using Demo.Domain.Model.Data;
+using Demo.Repositories.Implementations.Repositories;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
@@ -15,11 +17,10 @@ namespace Demo.Repositories
             // services.AddDbContext<DemoContex>();
 
             //add repositories and interfaces
-            services.AddScoped(typeof(CachedRepository<>));
-
+            services.AddScoped(typeof(ICacheRepository<>), typeof(CachedRepository<>));
+            return services;
             //services.AddTransient<IUnitOfWork>(provider=>
             //new UnitOfWork)
-            return services;
         }
     }
 }

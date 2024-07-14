@@ -8,7 +8,6 @@
 
   <ItemGroup>
     <Folder Include="EventHandlers\" />
-    <Folder Include="Implementations\" />
     <Folder Include="Interfaces\Proxies\" />
     <Folder Include="Mapping\" />
   </ItemGroup>

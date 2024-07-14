@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Demo.Repositories.Implementations.Repositories
 {
-    public interface IRepository<T> where T : BaseEntity
+    public interface ICacheRepository<T> where T : BaseEntity
     {
-        Task CacheEntityAsync(T entity);
+        Task<T> CacheEntityAsync(T entity);
 
         T MergeCachedEntities();
     }
